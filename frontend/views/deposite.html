@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="bootstrapmin.css">
+      <link type="text/css" rel="stylesheet" href="depositemoney.css">
+
+    </head>
+
+    <body class="back marg">
+      <header>
+          <div id="menu">
+           <ul >
+               <li><a href="#">Find Branch</a></li>
+               <li><a href="#">About Us</a></li>
+               <li><a href="#">Customer Care</a></li>
+               <li><a href="final.html">Bank Home</a></li>
+           </ul>
+
+               <img src="tag.png" class="log">
+
+
+
+       </div><br>
+
+
+
+
+       <div id="nav">
+           <ul>
+
+               <li class="dropdown"> <a href="/moneytrans.html" target="_blank" >Money transfer</a>
+
+
+               </li>
+
+               <li><a href="/withdraw.html" target="_blank">Withdraw Money</a></li>
+               <li><a href="/deposite.html">Deposite Money</a></li>
+               <li style="border-right:none"><a  href="/login.html">Account details</a></li>
+
+           </ul>
+
+       </div>
+       </header>
+
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start()";><b>-The General Schedule of Features and Charges (GSFC) is being revised with effect from April 1, 2017 for Saving Accounts, Privy League Saving & Current Accounts, Corporate Salary Accounts, JIFI Accounts & Sanman Accounts. Click here for the updated GSFC.
+                <br>
+
+                - IMPS Transaction charges for amount up to Rs. 1000 will not be charged for the period of 1st Jan'2017 to 31st Mar'2017. However, IMPS Transaction of more than Rs. 1000 will be charged as per applicable General Schedule of Features and Charges of respective Current Accounts, Savings Accounts and Corporate Salary account</b></marquee>
+        <body>
+        <div class="container backpic">
+            <h2 class="h2-heading">Deposit Money₹</h2>
+            <form class="formback" method="post" action="http://127.0.0.1:3000/deposite.html" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                <br>
+                <label class="col-sm-2">Bank:</label>
+                <input class="form-control" type="text"
+                       placeholder="Apna Bank">
+                <br>
+                <label class="col-sm-2 ">Account Number:</label>
+                <input class="form-control" type="number" name="accno" placeholder="Account Number">
+                <small class="smalltext">We'll never share your Account Number with anyone else.</small>
+                    <br>
+                    <br>
+                    <label class="col-sm-2">Amount:</label>
+               <!-- <div class="input-group">
+                    <div class="input-group-addon">$</div> -->
+                <input type="text" class="form-control" name="rupee" placeholder="Amount">
+                  <!--  <div class="input-group-addon">.00</div>
+                </div> -->
+                    <br>
+                    <label class="col-sm-2">Pan Card No:</label>
+                    <input type="text" class="form-control" name="pcard" placeholder="Pan Number">
+                    <br><label class="col-sm-2">Date:</label>
+                  <input placeholder="DD-MM-YYYY"class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+                    <br><label class="col-sm-2">Remarks:</label>
+                    <input type="text" class="form-control" placeholder="Transaction Remarks">
+                    <br>
+                 &nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+            <div class="col-md-4">
+                <div style="max-width:500px">
+  <img class="mySlides strech" src="fraud1.jpg" >
+  <img class="mySlides strech" src="fraud2.jpg" >
+  <img class="mySlides strech" src="fraud3.jpg" >
+</div>
+
+            </div>
+            <div class="col-md-4">
+
+                <span style="float:right"><h4 class="marque-head"><br><b>To prevent online fraud:</b></h4></span>
+                <marquee class="marqueetab"behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start()";> <b>-Keep current with your software and virus protection
+                       <br>-Create strong passwords
+                        <br>-Ignore emails from senders you don’t know
+                        <br>-Use your pop-up blocker
+                        <br>-Download files only from sites you know
+                        <br>-Sign up for email/text "transaction alerts" from your bank to keep track of your purchases
+                           <br>- Activate Verified by Visa for added security</b></marquee>
+
+            </div>
+   <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+        </body>
+                 <footer>
+            <div class="col-md-3">
+                <ul>
+                    <h4>Customer Service</h4>
+                    <li class="icon2">Customer Care Numbers</li>
+                </ul>
+
+           </div>
+                <div class="col-md-3">
+                    <ul>
+                        <h4>Our Initiatives</h4>
+                        <li class="icon2"><a href="#">Safe Banking | Go Green</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <h4>Useful Links</h4>
+                            <li class="icon2">Get User Id| Way To Bank| Online<br>
+                             Banking | Saving Account | PPF<br>
+                             Personal
+                             </li>
+                    </ul>
+
+                </div>
+                     <div class="col-md-3">
+                         <ul>
+                             <h4>Visit Other APNA Bank Sites</h4>
+                             <li class="icon2">APNA Group | APNA Foundation | APNA Lombard General Insurance | APNA Securities |
+                             </li>
+                         </ul>
+                     </div>
+
+
+        </footer>
+
+    </body>
+</html>

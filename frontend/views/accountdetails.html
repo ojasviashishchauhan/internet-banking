@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+    <head>
+       
+
+    </head>
+
+    <body>
+
+       <ul id="ko">
+        <li id="p1">abc</li>
+           <li id="p2">def</li>
+           <button onclick="myfun()">click me</button>
+        </ul>
+        <script>
+        
+            
+            
+            function myfun()
+            {
+                var x=document.createElement('li');
+                var y=document.createTextNode('MNO');
+                x.append(y);
+                var el=document.getElementById("ko");
+                var child=document.getElementById("p2");
+                el.insertBefore(x,child);
+            }
+            
+            
+              <body>
+
+       <button onclick="my()">click</button>
+        <script>
+            function my(){
+       var x="hello world";
+            var y= x.indexOf('orld');
+                document.write(y);
+        var z=x.replace("hello","hi");
+                
+                document.write(z);
+                
+                var q=x.substring(0,5);
+                document.write(q);
+            }
+            
+        </script>
+    </body>
+</html>
