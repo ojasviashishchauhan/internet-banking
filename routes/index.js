@@ -80,6 +80,21 @@ req.body.userid &&
  }
 });
 
+// get logout
+router.get('/logout', function(req, res, next){
+  if(req.session){
+    req.session.destroy(function(err){
+      if(err)
+      {
+        return next(err);
+      }else{
+        return res.redirect('/');
+      }
+    });
+  }
+});
+
+
 //login page
 router.get('/login.html',function(req, res, next){
   if(! req.session.userid ){
@@ -115,6 +130,9 @@ router.post('/deposite.html',function(req, res, next){
   if(req.body.accno && req.body.pcard && req.body.rupee)
   {
     user.findOne({accno : req.body.accno},function(err,user){
+      if(err){
+        next(err);
+      }
         var amount=req.body.rupee;
         if(user.rupee!=0)
         {
@@ -221,7 +239,7 @@ router.post('/moneytrans.html',function(req, res, next){
       }else {
 
           console.log("amount created successfully");
-
+/*
           user.findById(req.session.userid)
             .exec(function (error, user){
               if(error)
@@ -255,38 +273,38 @@ router.post('/moneytrans.html',function(req, res, next){
               }
                 });
 
+*/
 
-
-
-/*
-         user.findOne({accno: req.body.mynum}, function(err, user){
-            amount= parseInt(user.rupee) - parseInt(req.body.rupee);
-          var userData={
-            rupee: amount
-          }
-
-
-            user.update(userData,function(err, user){
-              if(err)
-              {
-                err = new Error("NOT ABLE TO PROCEED");
-                err.status= 401;
-                return next(err);
-              }else {
-                {
-                  console.log("amount debited successfully");
-                  return res.send("congratulations");
-                }
-              }
-            });
-
-          });*/
 }
 
 
     });
     });
 
+
+
+             user.findOne({accno: req.body.mynum}, function(err, user){
+                amount= parseInt(user.rupee) - parseInt(req.body.rupee);
+              var userData={
+                rupee: amount
+              }
+
+
+                user.update(userData,function(err, user){
+                  if(err)
+                  {
+                    err = new Error("NOT ABLE TO PROCEED");
+                    err.status= 401;
+                    return next(err);
+                  }else {
+                    {
+                      console.log("amount debited successfully");
+                      return res.send("congratulations");
+                    }
+                  }
+                });
+
+              });
 
 
 
