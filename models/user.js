@@ -81,3 +81,7 @@ userSchema.pre('save', function(next){
 });
 var user = mongoose.model('user', userSchema);
 module.exports = user;
+
+
+
+//its a bit late but better use monk than mongoose its easier and faster than mongoose
