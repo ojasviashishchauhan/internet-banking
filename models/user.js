@@ -84,4 +84,4 @@ module.exports = user;
 
 
 
-//its a bit late but better use monk than mongoose its easier and faster than mongoose
+//its a bit late but better use monk than mongoose its easier and faster than mongoose sry but i havent learned it yet
