@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var app = express();
 
-//use sessions for trackig logins
+//use sessions for trackig logins this is better stored in server or use system cashe of user to store it for security
 app.use(session({
   secret: 'ip project',
   resave: true,
